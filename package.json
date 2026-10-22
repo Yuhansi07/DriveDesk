@@ -1,0 +1,17 @@
+{
+  "name": "drivedesk-pro",
+  "version": "2.8.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": ">=22.13.0"},
+  "scripts": {
+    "start": "node api/server.js",
+    "dev": "node --watch api/server.js",
+    "test": "node --test tests/*.test.js",
+    "start:express": "node api/express-server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}

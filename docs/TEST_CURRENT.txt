@@ -1,0 +1,68 @@
+
+> drivedesk-pro@2.1.0 test
+> node --test tests/*.test.js
+
+TAP version 13
+# Subtest: end-to-end: login, CRUD, overlap, price, recommendation, payment, QR, GPS, alerts, OCR failure
+ok 1 - end-to-end: login, CRUD, overlap, price, recommendation, payment, QR, GPS, alerts, OCR failure
+  ---
+  duration_ms: 401.756181
+  type: 'test'
+  ...
+# Subtest: dates use half-open date ranges and validate invalid dates
+ok 2 - dates use half-open date ranges and validate invalid dates
+  ---
+  duration_ms: 2.027512
+  type: 'test'
+  ...
+# Subtest: linear regression fits small historical dataset
+ok 3 - linear regression fits small historical dataset
+  ---
+  duration_ms: 1.547991
+  type: 'test'
+  ...
+# Subtest: rule fallback transparently labels low data
+ok 4 - rule fallback transparently labels low data
+  ---
+  duration_ms: 0.262361
+  type: 'test'
+  ...
+# Subtest: vehicle recommendation respects capacity
+ok 5 - vehicle recommendation respects capacity
+  ---
+  duration_ms: 0.263459
+  type: 'test'
+  ...
+# Subtest: anomaly thresholds and plate parser
+ok 6 - anomaly thresholds and plate parser
+  ---
+  duration_ms: 0.479936
+  type: 'test'
+  ...
+# Subtest: haversine distance
+ok 7 - haversine distance
+  ---
+  duration_ms: 0.179438
+  type: 'test'
+  ...
+# Subtest: demand forecasting labels simple trend and reports observed historical months
+ok 8 - demand forecasting labels simple trend and reports observed historical months
+  ---
+  duration_ms: 0.93168
+  type: 'test'
+  ...
+# Subtest: fleet assistant clearly uses database and does not invent availability
+ok 9 - fleet assistant clearly uses database and does not invent availability
+  ---
+  duration_ms: 0.599529
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 465.336026

@@ -1,0 +1,22 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const read = p => readFileSync(p,'utf8');
+test('DriveDesk serves the unified dark stylesheet and uses one workspace', () => {
+  const server = read('api/server.js');
+  const html = read('demo/index.html');
+  const theme = read('flutter_app/lib/drive_theme.dart');
+  const main = read('flutter_app/lib/main.dart');
+  const fleet = read('flutter_app/lib/carzone_ui.dart');
+  assert.match(server,/\/demo\/modern\.css/);
+  assert.match(html,/demo\/modern\.css/);
+  assert.doesNotMatch(html,/carzone-preview\.html/);
+  assert.match(theme,/pickDriveDates/);
+  assert.match(main,/theme:driveTheme\(\)/);
+  assert.match(main,/Explore fleet/);
+  assert.match(main,/NewRentalWizardPage/);
+  assert.match(main,/RentalDeskPage/);
+  assert.match(fleet,/pickDriveDates\(context,range\)/);
+  assert.match(fleet,/pickDriveDates\(context,dates\)/);
+  assert.doesNotMatch(fleet,/showDateRangePicker\(/);
+});

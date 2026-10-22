@@ -1,0 +1,8 @@
+DriveDesk v2.8 compiler hotfix (2026-10-21)
+
+Fix: Flutter lib/customer_portal.dart line 216 compared String values with >; now parses the pickup date to DateTime and uses isAfter().
+Also makes TeamPage self-account lookup explicit to avoid nullable access ambiguity.
+
+Installation: Either extract this ZIP to a new folder, or replace flutter_app/lib/customer_portal.dart using the supplied standalone fixed file.
+
+Flutter SDK is not installed in build environment; please run flutter analyze and flutter run on Windows.

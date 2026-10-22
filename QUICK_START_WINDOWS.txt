@@ -1,0 +1,27 @@
+DRIVEDESK PRO 2.7 - COMPLETE ROLES EDITION
+==============================================
+
+1. Extract ZIP. Open DriveDesk_Pro folder (the one containing package.json).
+2. Install Node.js 22.13+ and Flutter SDK, if not already installed.
+3. Double-click RUN_DRIVEDESK_WINDOWS.bat (both servers in separate windows).
+4. Wait for Flutter to finish compiling and visit http://localhost:8080
+5. Sign in with admin@drivedesk.local / Demo@12345
+
+Alternative / troubleshooting:
+  Backend terminal:    npm start             [in DriveDesk_Pro root]
+  Frontend terminal:   .\RUN_FLUTTER_WINDOWS.bat
+  Browser backup:      http://127.0.0.1:3000/demo/
+  Backend tests:       npm test
+  Flutter validation:  cd flutter_app && flutter analyze && flutter test
+
+If 'package.json' not found, your terminal is one directory above the
+DriveDesk_Pro folder. Run 'cd DriveDesk_Pro' first.
+
+Old frontends may be cached. STOP old Flutter, run the new ZIP scripts, and
+hard refresh Chrome (Ctrl+Shift+R). Make sure ports 3000 and 8080 are free.
+
+Changes: ONE unified DriveDesk app using CarZone-inspired dark/teal UI;
+modern dashboard, menus, forms, one fleet explorer and a legible rental date
+picker. All API workflows remain connected. No independent CarZone project.
+
+All 7 role credentials and permission details: docs/USER_ROLES_AND_DEMO_LOGINS.md

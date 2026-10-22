@@ -1,0 +1,11 @@
+DriveDesk Pro v2.8 - Team Role Labels Hotfix
+
+Fixes three Dart compiler errors in flutter_app/lib/team_page.dart caused by missing teamRoles.
+Adds the seven role labels matching api/access.js, and simplifies the label expression.
+Preserves the v2.8 previous customer_portal.dart date comparison fix.
+
+Quick install: copy flutter_app/lib/team_page.dart into your current v2.8 project.
+Or extract the full ZIP into a NEW folder (avoid mixing versions), and run from that folder.
+
+Validation in this build: 20/20 backend tests passed. Flutter SDK not available in the build environment, so full Flutter compile could not be run here.
+On your computer run: cd flutter_app; flutter analyze; flutter run -d chrome --web-port=8080 --dart-define=API_BASE_URL=http://127.0.0.1:3000

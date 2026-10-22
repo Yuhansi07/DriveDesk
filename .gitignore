@@ -1,0 +1,12 @@
+node_modules/
+**/.dart_tool/
+**/.flutter-plugins*
+**/build/
+.env
+*.db
+*.db-shm
+*.db-wal
+data/
+uploads/
+coverage/
+.DS_Store

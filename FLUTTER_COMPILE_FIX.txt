@@ -1,0 +1,27 @@
+DriveDesk Pro v2.5 — Flutter screens.dart const hotfix
+
+Resolved the reported Flutter compiler failure:
+  lib/screens.dart:283:19
+  Cannot invoke a non-'const' constructor where a const expression is expected.
+
+Changed the help dialog content from:
+  content:const ConstrainedBox(constraints:BoxConstraints(maxWidth:420),child:Column(
+to:
+  content:ConstrainedBox(constraints:const BoxConstraints(maxWidth:420),child:const Column(
+
+Unchanged: backend, UI theme, booking workflows, optional AI integrations.
+Validation: 15/15 Node API/source-contract tests passed.
+The Flutter compiler was not available in the build environment, so Flutter
+compilation must be checked on your Windows PC using flutter analyze / flutter run.
+
+Running on Windows:
+1. Stop any old backend and Flutter servers (Ctrl+C in their terminals).
+2. Extract this ZIP to a NEW folder to avoid copying old screens.dart.
+3. Open the DriveDesk_Pro folder in VS Code.
+4. Terminal A: npm start
+5. Terminal B: cd flutter_app
+   flutter pub get
+   flutter run -d chrome --web-port=8080 --dart-define=API_BASE_URL=http://127.0.0.1:3000
+6. Open http://localhost:8080
+
+If port 3000 is already in use, stop the OLD DriveDesk server first.
